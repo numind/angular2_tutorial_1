@@ -8,9 +8,17 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { JumbotronComponent } from './components/jumbotron/jumbotron.component';
 import { AboutComponent } from './components/pages/about.component';
 import { HomeComponent } from './components/pages/home.component';
+
+// profile github search
 import { ProfileComponent } from './components/profile/profile.component';
 
-import { routing } from './app.routing';
+// spotify search
+import { SpotifyComponent } from './components/spotify/spotify.component';
+import { SPAboutComponent } from './components/spotify/about.component';
+import { SPSearchComponent } from './components/spotify/search.component';
+import { SPNavbarComponent } from './components/spotify/navbar.component';
+
+import { routing, appRoutingProviders } from './app.routing';
 
 @NgModule({
 
@@ -27,10 +35,12 @@ import { routing } from './app.routing';
     JumbotronComponent,
     AboutComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    SpotifyComponent,
+    SPAboutComponent, SPSearchComponent, SPNavbarComponent
   ],
   
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

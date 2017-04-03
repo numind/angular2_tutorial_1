@@ -1,0 +1,24 @@
+
+<h1>Need Music?</h1>
+<p class="lead">Use this app to search for your favourite song or artist!</p>
+
+<form>
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search Artist ..." [(ngModel)]="searchStr" name="searchStr" (keyup)="searchMusic()">
+</div>
+</form>
+
+    <div class="row" *ngIf="searchRes">
+      <div class="col-md-4" *ngFor="let artist of searchRes">
+
+        <div class="panel">
+          <div class="panel-title"><a routerLink="/artist/{{artist.id}}">{{artist.name}}</a> ({{artist.popularity}})</div>
+          <small class="panel-subtitle text-muted">Genres: <span *ngFor="let genre of artist.genres">{{genre + ' '}}</span></small>
+            <img class="panel-img" data-src="{{artist.images[0].url}}" *ngIf="artist.images[0]">
+          <div class="panel-body">
+            
+          </div>
+        </div>
+
+      </div>
+    </div>

@@ -10,20 +10,33 @@ import { GithubService } from '../../services/github.service';
 })
 export class ProfileComponent {
 
-  private user: any[];
-  private repos: any[];
+  user: any;
+  repos: any[];
   
+  username: string;
+
   constructor (private _githubServices: GithubService){
 
-    this._githubServices.getUser().subscribe(user => {
-      console.log(user);
-      this.user = user;
-    });
+    this.user = false;
+  
+  }
 
-    this._githubServices.getRepos().subscribe(repos => {
-      console.log(repos);
-      this.repos = repos;
-    });
+  searchUser(){
+
+    if(this.username !== ""){
+      this._githubServices.updateUser(this.username);
+
+      this._githubServices.getUser().subscribe(user => {
+        console.log(user);
+        this.user = user;
+      });
+
+      this._githubServices.getRepos().subscribe(repos => {
+        console.log(repos);
+        this.repos = repos;
+      });
+    }
+
   }
 
 }
