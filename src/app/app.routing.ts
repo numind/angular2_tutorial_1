@@ -9,6 +9,7 @@ import {SpotifyComponent} from './components/spotify/spotify.component';
 
 import { SPAboutComponent } from './components/spotify/about.component';
 import { SPSearchComponent } from './components/spotify/search.component';
+import { SPArtistComponent } from './components/spotify/artist.component';
 
     const appRoutes: Routes = [
         {
@@ -30,6 +31,10 @@ import { SPSearchComponent } from './components/spotify/search.component';
             {
                 path: 'search',
                 component: SPSearchComponent
+            },
+            {
+                path:'artist/:id',
+                component: SPArtistComponent
             }
             ]
         }

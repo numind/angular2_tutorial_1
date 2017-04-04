@@ -17,6 +17,7 @@ import { SpotifyComponent } from './components/spotify/spotify.component';
 import { SPAboutComponent } from './components/spotify/about.component';
 import { SPSearchComponent } from './components/spotify/search.component';
 import { SPNavbarComponent } from './components/spotify/navbar.component';
+import { SPArtistComponent } from './components/spotify/artist.component';
 
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -37,7 +38,7 @@ import { routing, appRoutingProviders } from './app.routing';
     HomeComponent,
     ProfileComponent,
     SpotifyComponent,
-    SPAboutComponent, SPSearchComponent, SPNavbarComponent
+    SPAboutComponent, SPSearchComponent, SPNavbarComponent, SPArtistComponent
   ],
   
   providers: [appRoutingProviders],

@@ -1,5 +1,6 @@
 import { Album } from './Album';
 import { Images } from './Image';
+import { Followers } from './Followers';
 
 export class Artist{
     id: number;
@@ -8,4 +9,5 @@ export class Artist{
     popularity: number;
     images: Images[];
     albums: Album[];
+    followers: Followers[];
 }
