@@ -5,6 +5,7 @@
         <div class="page-blog-post-image page-header">
           <img src="{{album.images[0].url}}" alt="" width="100%">
         </div>
+        <a href="{{album.external_urls.spotify}}" target="_blank" class="btn btn-success"><i class="fa fa-check"></i>&nbsp;&nbsp;View in Spotify</a>&nbsp;&nbsp;
         <h1>{{album.name}} <small>{{album.label}}</small></h1>
         <span *ngFor="let artist of album.artists">
           <a href routerLink="/spotify/artist/{{artist.id}}">{{artist.name}}</a> &nbsp;</span>
