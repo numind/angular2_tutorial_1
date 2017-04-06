@@ -18,6 +18,9 @@ import { SPAboutComponent } from './components/spotify/about.component';
 import { SPSearchComponent } from './components/spotify/search.component';
 import { SPNavbarComponent } from './components/spotify/navbar.component';
 import { SPArtistComponent } from './components/spotify/artist.component';
+import { SPAlbumComponent } from './components/spotify/album.component';
+
+import { SongTime } from './pipes/songtime.pipe';
 
 import { routing, appRoutingProviders } from './app.routing';
 
@@ -33,12 +36,13 @@ import { routing, appRoutingProviders } from './app.routing';
   declarations: [
     AppComponent,
     NavbarComponent,
+    SongTime,
     JumbotronComponent,
     AboutComponent,
     HomeComponent,
     ProfileComponent,
     SpotifyComponent,
-    SPAboutComponent, SPSearchComponent, SPNavbarComponent, SPArtistComponent
+    SPAboutComponent, SPSearchComponent, SPNavbarComponent, SPArtistComponent, SPAlbumComponent
   ],
   
   providers: [appRoutingProviders],

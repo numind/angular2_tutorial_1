@@ -1,0 +1,51 @@
+   <div class="px-content" *ngIf="album">
+
+    <div class="row m-t-1">
+      <div class="col-md-4 col-lg-3">
+        <div class="page-blog-post-image page-header">
+          <img src="{{album.images[0].url}}" alt="" width="100%">
+        </div>
+        <h1>{{album.name}} <small>{{album.label}}</small></h1>
+        <span *ngFor="let artist of album.artists">
+          <a href routerLink="/spotify/artist/{{artist.id}}">{{artist.name}}</a> &nbsp;</span>
+
+        <p>
+          release date: {{album.release_date}}
+        </p>
+      </div>
+      <div class="col-md-8 col-lg-9">
+        <div class="table-primary">
+              <div class="table-header">
+                <div class="table-caption">
+                  TRACK LIST                
+                </div>
+              </div>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Track title</th>
+                    <th>Artists</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let track of album.tracks.items">
+                    <td>{{track.track_number}}</td>
+                    <td>{{track.name}} <i class="icon ion-android-alert" aria-hidden="true" *ngIf="track.explicit"></i></td>
+                    
+                    <td><span *ngFor="let artist of track.artists"><a routerLink="/spotify/artist/{{artist.id}}">{{artist.name}}</a> &nbsp;</span> </td>
+                    <td>{{track.duration_ms | songtime}}</td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+              <div class="table-footer">
+                Total duration: 
+              </div>
+            </div>
+
+      </div>
+    </div>
+
+   </div>
