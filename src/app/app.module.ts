@@ -20,6 +20,10 @@ import { SPNavbarComponent } from './components/spotify/navbar.component';
 import { SPArtistComponent } from './components/spotify/artist.component';
 import { SPAlbumComponent } from './components/spotify/album.component';
 
+// mean TODO 
+import { MeantodoComponent } from './components/meantodo/meantodo.component';
+
+// PIPES
 import { SongTime } from './pipes/songtime.pipe';
 
 import { routing, appRoutingProviders } from './app.routing';
@@ -42,7 +46,8 @@ import { routing, appRoutingProviders } from './app.routing';
     HomeComponent,
     ProfileComponent,
     SpotifyComponent,
-    SPAboutComponent, SPSearchComponent, SPNavbarComponent, SPArtistComponent, SPAlbumComponent
+    SPAboutComponent, SPSearchComponent, SPNavbarComponent, SPArtistComponent, SPAlbumComponent,
+    MeantodoComponent
   ],
   
   providers: [appRoutingProviders],

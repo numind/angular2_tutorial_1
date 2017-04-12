@@ -4,8 +4,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {HomeComponent} from './components/pages/home.component';
 import {AboutComponent} from './components/pages/about.component';
 import {SpotifyComponent} from './components/spotify/spotify.component';
-
-
+import {MeantodoComponent} from './components/meantodo/meantodo.component';
 
 import { SPAboutComponent } from './components/spotify/about.component';
 import { SPSearchComponent } from './components/spotify/search.component';
@@ -24,6 +23,10 @@ import { SPAlbumComponent } from './components/spotify/album.component';
         {
             path: 'about',
             component: AboutComponent
+        },
+        {
+            path: 'meantodos',
+            component: MeantodoComponent
         },
         {
             path: 'spotify',
